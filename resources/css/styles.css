@@ -1,0 +1,142 @@
+
+/* --------------------------------------Default Setup-------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-family: 'Lato', san-serif;
+    font-size: 20px;
+     /* automatic is 16px if we dont set font-size */
+    color: black; 
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------Reuseable Component--------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------ */
+
+.btn{
+    text-decoration: none;    /*xoa het cai dat mac dinh cua phong chu*/
+    color: white;
+    background-color: orangered;
+    word-spacing: 2px;
+    font-size: 90%;
+    padding: 6px 10px;
+    border-radius: 7px;     /*lam cho vien cong lai*/
+    /* Lưu ý: display inline không chỉnh được width với height. Vì thế sẽ sử dụng inline-block để có thể vừa chỉnh được
+    width height vừa có thể hiển thị trên cùng một hàng */
+    width: 135px;
+    display: inline-block;
+    text-align: center;
+    transition: all .3s;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: rgb(255,118,26);
+}
+
+.clearfix::after{  /*để khôi nội dung ở dưới ko chạy theo 4 cái đường link*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1{
+    text-transform: lowercase;   /*chinh kieu chu*/
+    font-size: 200%;
+    font-weight: 800;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: white;
+    line-height: 120%;
+    margin-bottom: 10px;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 180%;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* ------------------------------------------- Header --------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------- */
+
+header{
+    background-image: linear-gradient(to left top, rgba(132, 206, 235,0.95)55%,rgba(136, 96, 208,0.95)), url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh; 
+    /* 70 view height */
+    background-attachment: fixed;
+    /* làm cho background chạy theo khi cuộn xuống trang  */
+}
+
+.logo{
+    width: 270px;
+    height: 150px;
+    margin-left: 160px;
+    margin-top: -10px;
+    float: left;
+}
+
+
+           /*--------------------Class của name của  4 cái đường link phía trên------*/
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-right: 50px;
+    margin-top: 70px;
+
+}
+
+.main-nav li{   /* giữa các đường link với nhau*/
+    display: inline-block;
+    margin-right: 20px;
+    /* giúp hiển thị trên cùng một hàng */
+}
+
+.main-nav li a{  /*trong các đường link vd kiểu chữ này kia*/
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+    font-weight: 600;
+    transition: border-bottom 0.5s;
+    padding: 3px 0;     /*khoảng cách của cái border bottom với chữ*/
+}
+
+.main-nav li a:hover,         /*điều khiển lia chuột*/
+.main-nav li a:active{        /*điều khiển click vào nó*/
+    border-bottom: 2px solid #cccccc;
+}
+            /*--------------------Class của name của  4 cái đường link phía trên------*/
+
+
+
+.heading-main-box{
+    position: absolute;
+    top: 40%;
+    left: 68%;
+    transform: translate(-45%,-55%);    /*đi lùi lại 50%*/
+    width: 1140px;
+
+}
+
+
+/* ----------------------------------- About Section ------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------- */
+
+
